@@ -1,4 +1,4 @@
-# 🍕 Food Del — Full-Stack Food Delivery Platform
+# Food Del - Full-Stack Food Delivery Platform
 
 A complete food ordering and delivery web application built with the MERN stack. Customers can browse a menu, add items to cart, pay securely via Stripe, and track their order status. Restaurant admins manage the menu and fulfil orders through a separate admin panel.
 
@@ -13,12 +13,9 @@ A complete food ordering and delivery web application built with the MERN stack.
 - [Overview](#overview)
 - [Tech Stack](#tech-stack)
 - [Features](#features)
-- [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
 - [Environment Variables](#environment-variables)
 - [Deployment](#deployment)
-- [Screenshots](#screenshots)
-- [Future Improvements](#future-improvements)
 
 ---
 
@@ -67,36 +64,6 @@ Food Del is a production-ready food delivery platform with three independently d
 - JWT middleware protects all user-specific and admin-specific routes
 - Role-based access control — customer tokens cannot access admin endpoints
 - Multer handles multipart image uploads; files served statically from the backend
-
----
-
-## Project Structure
-food-del/
-│
-├── backend/
-│   ├── config/          # MongoDB connection
-│   ├── controllers/     # Route logic (food, user, cart, order)
-│   ├── middleware/       # JWT auth middleware
-│   ├── models/          # Mongoose schemas (User, Food, Order)
-│   ├── routes/          # Express route definitions
-│   ├── uploads/         # Stored food item images
-│   └── server.js        # Entry point, Express app setup
-│
-├── frontend/
-│   ├── public/
-│   └── src/
-│       ├── assets/
-│       ├── components/  # Navbar, Footer, FoodItem, Cart, etc.
-│       ├── context/     # StoreContext — cart and auth state
-│       ├── pages/       # Home, Cart, PlaceOrder, MyOrders, Verify
-│       └── App.jsx
-│
-└── admin/
-├── public/
-└── src/
-├── components/  # Navbar, Sidebar
-├── pages/       # Add, List, Orders
-└── App.jsx
 
 ---
 
@@ -151,15 +118,15 @@ const url = "http://localhost:4000";
 Open three separate terminals:
 
 ```bash
-# Terminal 1 — Backend (runs on port 4000)
+# Terminal 1 - Backend (runs on port 4000)
 cd backend
 npm run server
 
-# Terminal 2 — Customer Frontend (runs on port 5173)
+# Terminal 2 - Customer Frontend (runs on port 5173)
 cd frontend
 npm run dev
 
-# Terminal 3 — Admin Panel (runs on port 5174)
+# Terminal 3 - Admin Panel (runs on port 5174)
 cd admin
 npm run dev
 ```
@@ -210,23 +177,6 @@ All three services are deployed on **Render** as separate web services.
 
 ---
 
-## Screenshots
-
-> Add screenshots of the customer storefront, cart, checkout, and admin panel here.
-
----
-
-## Future Improvements
-
-- **Real-time order tracking** — WebSocket or Server-Sent Events so status updates push to the customer instantly without polling
-- **Email notifications** — Order confirmation and delivery notification emails via Nodemailer or Resend
-- **Search and filtering** — Search by food name, filter by price range or dietary tags
-- **User reviews** — Allow customers to rate and review items after delivery
-- **Analytics dashboard** — Sales charts, most ordered items, and revenue tracking in the admin panel
-- **Mobile app** — React Native version sharing the same backend API
-
----
-
 ## Author
 
 **Bhavya Patel**
@@ -237,4 +187,4 @@ All three services are deployed on **Render** as separate web services.
 
 ## License
 
-MIT — free to use as a reference or starting point.
+MIT - free to use as a reference or starting point.
